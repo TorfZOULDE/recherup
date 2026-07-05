@@ -1,0 +1,5 @@
+{
+  "watch": ["app.js", "server.js", "controllers", "routes", "middlewares", "config"],
+  "ext": "js,json",
+  "ignore": ["*.txt", "node_modules"]
+}
