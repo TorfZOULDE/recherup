@@ -7,6 +7,7 @@ const app = express();
 // Configuration des CORS (autoriser uniquement ton frontend)
 app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
 app.use(express.json());
+app.get('/api/ping', (req, res) => res.json({ ok: true, message: 'Backend fonctionnel' }));
 const contactRoutes = require("./routes/contact.routes");
 app.use("/api/contact", contactRoutes);
 // Routes principales
