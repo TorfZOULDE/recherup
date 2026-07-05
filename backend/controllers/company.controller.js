@@ -8,6 +8,7 @@ exports.getAll = async (req, res) => {
     const [rows] = await db.query(`SELECT ${BASE_FIELDS} FROM companies WHERE status = 'approved'`);
     res.json(rows);
   } catch (err) {
+    console.error("GET ALL COMPANIES ERROR:", err);
     res.status(500).json({ error: "Erreur serveur" });
   }
 };
